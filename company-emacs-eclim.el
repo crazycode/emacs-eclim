@@ -154,7 +154,7 @@ available."
 				 (cee--join-list arg-list glue)
 				 (when end-delim (list end-delim))))))
     (if (and eclim-use-yasnippet (featurep 'yasnippet))
-	(yas/expand-snippet (args-to-string
+	(yas-expand-snippet (args-to-string
 			     (loop for arg in args
 				   for i from 1
 				   collect (concat "${" (int-to-string i) ":" arg "}"))))

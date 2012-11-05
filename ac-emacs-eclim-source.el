@@ -78,7 +78,7 @@
 		 (template (ac-emacs-eclim-yasnippet-convert insertion)))
 	    (delete-region ac-emacs-eclim-point end)
 	    (if (and eclim-use-yasnippet template (featurep 'yasnippet))
-		(yas/expand-snippet template)
+		(yas-expand-snippet template)
 	      (insert insertion))
 	    (when package
 				(eclim-java-import (concat package "." (substring insertion 0 (or (string-match "[<(]" insertion)
